@@ -45,6 +45,7 @@ wget --no-check-certificate -qO- "https://raw.githubusercontent.com/UndCover/Pyr
 sed -i "/thunder.jar/a\    implementation files('libs@pyramid.aar')" $CURRENT_DIR/$DIR/app/build.gradle
 sed -i 's#@#\\#g' $CURRENT_DIR/$DIR/app/build.gradle
 sed -i 's#pyramid#\\pyramid#g' $CURRENT_DIR/$DIR/app/build.gradle
+sed -i 's/abiFilters "arm64-v8a"/abiFilters "armeabi-v7a"\n            \/\/abiFilters "arm64-v8a"/' $CURRENT_DIR/$DIR/app/build.gradle
 echo "" >>$CURRENT_DIR/$DIR/app/proguard-rules.pro
 echo "" >>$CURRENT_DIR/$DIR/app/proguard-rules.pro
 echo "#添加PY支持" >>$CURRENT_DIR/$DIR/app/proguard-rules.pro
