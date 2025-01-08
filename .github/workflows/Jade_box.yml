@@ -1,4 +1,4 @@
-name: Mbox Build
+name: Jade_box Build
 
 on:
 #  push:
@@ -15,7 +15,7 @@ jobs:
         with:
           fetch-depth: 0
       - name: Clone Project
-        run: git clone -b main --depth=1 https://github.com/q1017673817/Mbox
+        run: git clone -b main --depth=1 https://github.com/q1017673817/box
       - name: DIY
         run: |
           chmod +x diy-J.sh
@@ -36,5 +36,5 @@ jobs:
       - name: Upload App To Artifact
         uses: actions/upload-artifact@v3
         with:
-          name: com.github.tvbox.osc
+          name: Jade_box
           path: ${{ github.workspace }}/apk/*
